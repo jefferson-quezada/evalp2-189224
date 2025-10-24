@@ -76,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 
-// Si no es POST, mostrar el formulario
-include 'cuadrantes.php';
+// Si no es POST, redirigir al formulario
+header("Location: cuadrantes.php");
+exit();
 ?>

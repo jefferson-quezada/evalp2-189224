@@ -106,6 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 
-// Si no es POST, mostrar el formulario
-include 'calculadora.php';
+// Si no es POST, redirigir al formulario
+header("Location: calculadora.php");
+exit();
 ?>
