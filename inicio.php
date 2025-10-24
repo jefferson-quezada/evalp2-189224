@@ -184,6 +184,22 @@
                 </ul>
                 <div class="btn-access">Acceder a Calculadora</div>
             </a>
+            
+            <a href="cuadrantes.php" class="exercise-card">
+                <div class="exercise-icon">📐</div>
+                <div class="exercise-title">Ejercicio 3: Identificación de Cuadrantes</div>
+                <div class="exercise-description">
+                    Identifica en qué cuadrante del plano cartesiano está ubicado un punto
+                </div>
+                <ul class="exercise-features">
+                    <li>Identificación de 4 cuadrantes</li>
+                    <li>Detección de ejes X e Y</li>
+                    <li>Identificación del origen</li>
+                    <li>Visualización del plano cartesiano</li>
+                    <li>Validación de coordenadas</li>
+                </ul>
+                <div class="btn-access">Acceder a Cuadrantes</div>
+            </a>
         </div>
         
         <div class="footer">
