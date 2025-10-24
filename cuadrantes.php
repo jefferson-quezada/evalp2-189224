@@ -355,13 +355,18 @@ session_start();
                         $x = $punto['x'];
                         $y = $punto['y'];
                         
-                        // Convertir coordenadas a posición en el plano (escala 1:10)
-                        $pos_x = 50 + ($x * 10); // Centro + offset
-                        $pos_y = 50 - ($y * 10); // Centro - offset (invertir Y)
+                        // Convertir coordenadas a posición en el plano (escala 1:8)
+                        // El centro del plano está en (200, 200) para un plano de 400x400
+                        $centro_x = 200;
+                        $centro_y = 200;
+                        $escala = 8;
                         
-                        // Limitar posición dentro del plano
-                        $pos_x = max(10, min(390, $pos_x));
-                        $pos_y = max(10, min(390, $pos_y));
+                        $pos_x = $centro_x + ($x * $escala);
+                        $pos_y = $centro_y - ($y * $escala); // Invertir Y para que positivo vaya arriba
+                        
+                        // Limitar posición dentro del plano (márgenes de 20px)
+                        $pos_x = max(20, min(380, $pos_x));
+                        $pos_y = max(20, min(380, $pos_y));
                         ?>
                         <div class="point" style="left: <?php echo $pos_x; ?>px; top: <?php echo $pos_y; ?>px;"></div>
                         <div class="point-label" style="left: <?php echo $pos_x; ?>px; top: <?php echo $pos_y; ?>px;">
