@@ -65,6 +65,22 @@ try {
             color: #666;
         }
         
+        .btn-home {
+            background: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            margin-right: 0.5rem;
+        }
+        
+        .btn-home:hover {
+            background: #218838;
+        }
+        
         .btn-logout {
             background: #dc3545;
             color: white;
@@ -166,13 +182,14 @@ try {
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🏠 Dashboard del Sistema</h1>
-        <div class="user-info">
-            <span class="welcome-text">Bienvenido, <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong></span>
-            <a href="auth/logout.php" class="btn-logout">Cerrar Sesión</a>
+        <div class="header">
+            <h1>🏠 Dashboard del Sistema</h1>
+            <div class="user-info">
+                <span class="welcome-text">Bienvenido, <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong></span>
+                <a href="inicio.php" class="btn-home">🏠 Inicio</a>
+                <a href="auth/logout.php" class="btn-logout">Cerrar Sesión</a>
+            </div>
         </div>
-    </div>
     
     <div class="container">
         <?php if (isset($_GET['success'])): ?>

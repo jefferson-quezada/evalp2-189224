@@ -16,7 +16,7 @@ session_start();
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg,rgb(234, 164, 102) 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 2rem 0;
         }
@@ -295,6 +295,9 @@ session_start();
         <div class="header">
             <h1>📐 Identificación de Cuadrantes</h1>
             <p>Plano Cartesiano - Determina en qué cuadrante está ubicado tu punto</p>
+            <div style="margin-top: 1rem;">
+                <a href="inicio.php" style="background: #28a745; color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none; font-weight: 500;">🏠 Volver al Inicio</a>
+            </div>
         </div>
         
         <div class="main-content">
