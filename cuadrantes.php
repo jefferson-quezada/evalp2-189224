@@ -369,32 +369,32 @@ session_start();
                         </div>
                     <?php endif; ?>
                 </div>
-                
-                <!-- Mostrar resultados si existen -->
-                <?php if (isset($_GET['resultado']) && $_GET['resultado'] === 'exitoso'): ?>
-                    <div class="results">
-                        <h3>✅ Resultado de la Identificación</h3>
-                        <?php if (isset($_SESSION['resultado_cuadrante'])): ?>
-                            <div class="result-item">
-                                <span class="result-label">Coordenadas:</span>
-                                <span class="result-value">(<?php echo $_SESSION['coordenadas']['x']; ?>, <?php echo $_SESSION['coordenadas']['y']; ?>)</span>
-                            </div>
-                            <div class="result-item">
-                                <span class="result-label">Ubicación:</span>
-                                <span class="result-value"><?php echo htmlspecialchars($_SESSION['resultado_cuadrante']); ?></span>
-                            </div>
-                        <?php endif; ?>
+            </div>
+        </div>
+        
+        <!-- Mostrar resultados si existen - FUERA del panel del plano -->
+        <?php if (isset($_GET['resultado']) && $_GET['resultado'] === 'exitoso'): ?>
+            <div class="results" style="margin-top: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                <h3>✅ Resultado de la Identificación</h3>
+                <?php if (isset($_SESSION['resultado_cuadrante'])): ?>
+                    <div class="result-item">
+                        <span class="result-label">Coordenadas:</span>
+                        <span class="result-value">(<?php echo $_SESSION['coordenadas']['x']; ?>, <?php echo $_SESSION['coordenadas']['y']; ?>)</span>
                     </div>
-                <?php endif; ?>
-                
-                <!-- Mostrar errores si existen -->
-                <?php if (isset($_GET['error'])): ?>
-                    <div class="error-message">
-                        <strong>❌ Error:</strong> <?php echo htmlspecialchars($_GET['error']); ?>
+                    <div class="result-item">
+                        <span class="result-label">Ubicación:</span>
+                        <span class="result-value"><?php echo htmlspecialchars($_SESSION['resultado_cuadrante']); ?></span>
                     </div>
                 <?php endif; ?>
             </div>
-        </div>
+        <?php endif; ?>
+        
+        <!-- Mostrar errores si existen - FUERA del panel del plano -->
+        <?php if (isset($_GET['error'])): ?>
+            <div class="error-message" style="margin-top: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                <strong>❌ Error:</strong> <?php echo htmlspecialchars($_GET['error']); ?>
+            </div>
+        <?php endif; ?>
     </div>
 </body>
 </html>
