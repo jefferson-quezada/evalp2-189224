@@ -20,10 +20,10 @@ CREATE TABLE users (
 -- Contraseña: admin123
 -- (La contraseña está hasheada usando password_hash de PHP)
 INSERT INTO users (username, email, password_hash) VALUES 
-('admin', 'admin@sistema.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+('admin', 'admin@sistema.com', '$2y$10$RhhhO.DjkwIALXv3XpjaIOSSkEQcPoDgyMKKZbarEBmOxNWWgQVFS');
 
 -- Insertar otro usuario de prueba
 -- Usuario: usuario1
 -- Contraseña: password123
 INSERT INTO users (username, email, password_hash) VALUES 
-('usuario1', 'usuario1@test.com', '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm');
+('usuario1', 'usuario1@test.com', '$2y$10$Po21N.SaQLtHLgXQgPLide0I463YWtuvdDcOuQW0LQkx1if2IHZ7C');
